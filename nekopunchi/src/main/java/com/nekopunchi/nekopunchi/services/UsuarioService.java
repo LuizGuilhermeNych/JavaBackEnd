@@ -1,0 +1,61 @@
+package com.nekopunchi.nekopunchi.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.nekopunchi.nekopunchi.model.Usuario;
+import com.nekopunchi.nekopunchi.repository.UsuarioRepository;
+
+@Service
+public class UsuarioService {
+    
+    @Autowired
+    private UsuarioRepository usuarioRepository;
+
+    /**
+     * Método para retornar uma lista de usuários.
+     * @return lista de usuários.
+     */
+    public List<Usuario> obterTodos(){
+        return usuarioRepository.obterUsuarios();
+    }
+
+     /**
+     * Método que retorna uma lista de usuários.
+     * @param id do usuário que será localizado.
+     * @return Retorna um usuário caso tenha encontrado.
+     */
+    public Optional<Usuario> obterPorId(Integer id){
+        return usuarioRepository.obterPorId(id);
+    }
+
+    /**
+     * Método para adicionar usuário na lista.
+     * @param usuario que será adicionado.
+     * @return Retorna o produto que foi adicionado na lista.
+     */
+    public Usuario adicionar(Usuario usuario){
+        return usuarioRepository.adicionar(usuario);
+    }
+
+    /**
+     * Método para deletar o usuário por id.
+     * @param id do usuário que será deletado.
+     */
+    public void deletar (Integer id){
+        usuarioRepository.deletar(id);
+    }
+
+    /**
+     * Método para atualizar o usuário na lista.
+     * @param id do usuário que será atualizado.
+     * @return Retorna o usuário após atualizar a lista.
+     */
+    public Usuario atualizar (Integer id, Usuario usuario){
+        usuario.setId(id);
+        return usuarioRepository.atualizar(usuario);
+    }
+}

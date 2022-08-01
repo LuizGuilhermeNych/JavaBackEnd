@@ -1,0 +1,17 @@
+Objetivo:
+
+-> Criar um API RESTFull para controle de usuários;
+
+    Modelo: FEITO
+        Usuário: id, nome.
+
+    Repositório de usuário: FEITO
+        obterTodos, obterPorId, adicionar, atualizar, deletar.
+
+    Serviço de usuário: FEITO
+        obterTodos, obterPorId, adicionar, atualizar, deletar.
+
+    Controller de usuário: FEITO
+        obterTodos, obterPorId, adicionar, atualizar, deletar.
+
+        
