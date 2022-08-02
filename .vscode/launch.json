@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-NekopunchiApplication<nekopunchi>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.nekopunchi.nekopunchi.NekopunchiApplication",
+            "projectName": "nekopunchi",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

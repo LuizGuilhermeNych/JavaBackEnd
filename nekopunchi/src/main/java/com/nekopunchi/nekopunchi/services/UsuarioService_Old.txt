@@ -10,7 +10,7 @@ import com.nekopunchi.nekopunchi.model.Usuario;
 import com.nekopunchi.nekopunchi.repository.UsuarioRepository;
 
 @Service
-public class UsuarioService {
+public class UsuarioService_Old {
     
     @Autowired
     private UsuarioRepository usuarioRepository;
@@ -19,44 +19,43 @@ public class UsuarioService {
      * Método para retornar uma lista de usuários.
      * @return lista de usuários.
      */
-    public List<Usuario> obterTodos(){
-        return usuarioRepository.findAll();
-    }
+//    public List<Usuario> obterTodos(){
+//        return usuarioRepository.obterUsuarios();
+//    }
 
      /**
      * Método que retorna uma lista de usuários.
      * @param id do usuário que será localizado.
      * @return Retorna um usuário caso tenha encontrado.
      */
-    public Optional<Usuario> obterPorId(Integer id){
-        return usuarioRepository.findById(id);
-    }
+//    public Optional<Usuario> obterPorId(Integer id){
+//        return usuarioRepository.obterPorId(id);
+//    }
 
     /**
      * Método para adicionar usuário na lista.
      * @param usuario que será adicionado.
      * @return Retorna o produto que foi adicionado na lista.
      */
-    public Usuario adicionar(Usuario usuario){
-        usuario.setId(null);
-        return usuarioRepository.save(usuario);
-    }
+//    public Usuario adicionar(Usuario usuario){
+//        return usuarioRepository.adicionar(usuario);
+//    }
 
     /**
      * Método para deletar o usuário por id.
      * @param id do usuário que será deletado.
      */
-    public void deletar (Integer id){
-        usuarioRepository.deleteById(id);
-    }
+//    public void deletar (Integer id){
+//        usuarioRepository.deletar(id);
+//    }
 
     /**
      * Método para atualizar o usuário na lista.
      * @param id do usuário que será atualizado.
      * @return Retorna o usuário após atualizar a lista.
      */
-    public Usuario atualizar (Integer id, Usuario usuario){
-        usuario.setId(id);
-        return usuarioRepository.save(usuario);
-    }
+//    public Usuario atualizar (Integer id, Usuario usuario){
+//        usuario.setId(id);
+//        return usuarioRepository.atualizar(usuario);
+//    }
 }
